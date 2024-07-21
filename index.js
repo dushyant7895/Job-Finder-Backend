@@ -11,8 +11,9 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const corsOptions = {
-    origin: 'job-finder-frontend-azure.vercel.app',  // Your frontend URL
-    optionsSuccessStatus: 200
+    origin: ['job-finder-frontend-azure.vercel.app'],  // Your frontend URL
+    optionsSuccessStatus: 200,
+    methods:["POST","GET"],
 };
 
 app.use(cors(corsOptions));

@@ -19,7 +19,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-const MONGO_URL="mongodb+srv://dushyant787898:07tL3yz4G7QBEB67@job-listing-db.axqjfav.mongodb.net/job-listing-2?retryWrites=true&w=majority&appName=job-listing-db"
+// const MONGO_URL="mongodb+srv://dushyant787898:07tL3yz4G7QBEB67@job-listing-db.axqjfav.mongodb.net/job-listing-2?retryWrites=true&w=majority&appName=job-listing-db"
 
 mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log('Connected to MongoDB');

@@ -13,6 +13,7 @@ const app = express();
 const corsOptions = {
     origin: 'https://job-finder.vercel.app',  // Your frontend URL
     optionsSuccessStatus: 200,
+    credentials: true,
    
 };
 

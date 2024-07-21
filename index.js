@@ -10,12 +10,12 @@ const cors = require('cors');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-// const corsOptions = {
-//     origin: 'https://job-finder-frontend-omega.vercel.app/',  // Your frontend URL
-//     optionsSuccessStatus: 200
-// };
+const corsOptions = {
+    origin: 'https://job-finder-omega.vercel.app/',  // Your frontend URL
+    optionsSuccessStatus: 200
+};
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URL).then(() => {
